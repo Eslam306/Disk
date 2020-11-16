@@ -1,0 +1,10 @@
+def move(fr,t):
+    print("move from ", fr, " to ", t)
+
+def via(n, fr, v, t):
+    if n == 0:
+        pass
+    else:
+        via(n-1,fr, t, v)
+        move(fr, t)
+        via(n-1,v,fr,t)
